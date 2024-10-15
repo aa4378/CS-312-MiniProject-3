@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+
+<body>
+    <h1>Let's edit this Blog Post...</h1>
+    <form action="/update-post/<%= index %>" method="POST">
+        <label for="title">New Title:</label>
+        <input type="text" id="title" name="title" value="<%= post.title %>" required><br><br>
+
+        <label for="author">New Author:</label>
+        <input type="text" id="author" name="author" value="<%= post.author %>" required><br><br>
+
+        <label for="content">New Content:</label><br>
+        <textarea id="content" name="content" rows="5" cols="30" required><%= post.content %></textarea><br><br>
+
+        <button type="submit">Update Post</button>
+    </form>
+</body>
+</html>
